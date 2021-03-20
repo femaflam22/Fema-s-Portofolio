@@ -182,7 +182,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    border: 5px solid #aaa8a8;
+    border: 5px solid var(--bg-primary);
 }
 
 .about-me .user .user-name {
@@ -191,67 +191,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-/* skill */
-
-.skill-wrap {
-    position: relative;
-    margin-top: 20px;
-    width: 90%;
-    padding-right: 5rem;
-}
-
-.skill-wrap .content {
-    width: 100%;
-    background: #ddd;
-}
-
-.skill-content .skil {
-    text-align: right;
-    padding: 1px 10px 1px 0;
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-
-.skill-wrap .skill-content.html {
-    width: 90%;
-    background: #4caf50;
-}
-
-.skill-wrap .skill-content.css {
-    width: 85%;
-    background: #1572be;
-}
-
-.skill-wrap .skill-content.js {
-    width: 70%;
-    background: #a0ad12;
-}
-
-.skill-wrap .skill-content.php {
-    width: 70%;
-    background: #808080;
-}
-
-.skill-wrap .skill-content.laravel {
-    width: 80%;
-    background: #ff3c2e;
-}
-
-.skill-wrap .skill-content.sql {
-    width: 85%;
-    background: #463508;
-}
-
-
 /* biodata */
 
-.about-wrap .second-content {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 50%;
-    padding-right: 3rem;
+.biodata {
     padding-top: 3rem;
+    padding-right: 5rem;
 }
 
 .biodata ul li {
@@ -281,7 +225,7 @@ body::-webkit-scrollbar-thumb {
     float: left;
     margin-right: 5px;
     padding: 3px 10px;
-    background: #aaa8a8;
+    background: var(--bg-primary);
     font-size: 14px;
     line-height: 20px;
     color: #fff;
@@ -291,12 +235,75 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+/* skill */
+
+.about-wrap .second-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding-top: 3rem;
+}
+
+.skill-wrap {
+    position: relative;
+    margin-top: 20px;
+    width: 90%;
+}
+
+.skill-wrap p span {
+    font-size: 0.8rem;
+}
+
+.skill-wrap .content {
+    width: 100%;
+    background: #ddd;
+}
+
+.skill-content .skil {
+    text-align: right;
+    padding: 1px 10px 1px 0;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.skill-wrap .skill-content.html {
+    width: 90%;
+    background: #e98b11;
+}
+
+.skill-wrap .skill-content.css {
+    width: 85%;
+    background: #1c93f5;
+}
+
+.skill-wrap .skill-content.js {
+    width: 70%;
+    background: #d2e415;
+}
+
+.skill-wrap .skill-content.php {
+    width: 70%;
+    background: #c29999;
+}
+
+.skill-wrap .skill-content.laravel {
+    width: 80%;
+    background: #ff3425;
+}
+
+.skill-wrap .skill-content.sql {
+    width: 85%;
+    background: #dda303;
+}
+
+
 /* quotes */
 
 .quotes {
     position: relative;
     text-align: center;
-    padding: 5rem 3rem 0 3rem;
+    padding: 5rem 3rem 0 0;
 }
 
 .quotes .text {
@@ -394,7 +401,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     width: 100%;
     height: 80vh;
-    background: linear-gradient(147deg, #c7c4c4 10%, #aaa8a8 74%);
+    background: var(--bg-primary);
 }
 
 .web-wrap {
@@ -405,7 +412,7 @@ body::-webkit-scrollbar-thumb {
     transform: translateY(-30px);
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 10px 50px rgba(219, 138, 138, 0.4);
+    box-shadow: 0 5px 20px rgba(228, 132, 132, 0.4);
     padding: 25px;
     transition: all 0.3s;
 }
@@ -589,7 +596,7 @@ input {
     width: 90%;
     height: 300px;
     margin: auto;
-    border: 3px solid #808080;
+    border: 3px solid var(--bg-primary);
 }
 
 .top-card img {
@@ -613,7 +620,7 @@ input {
     height: 100px;
     position: relative;
     border: 2px solid;
-    border-image-source: linear-gradient(to top, rgba(152, 156, 165, 0.7) 10%, rgba(173, 170, 170, 0) 70%);
+    border-image-source: linear-gradient(to top, var(--bg-primary) 10%, rgba(152, 156, 165, 0.7) 70%);
     border-image-slice: 1;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.13);
 }
@@ -653,7 +660,7 @@ input {
 .footer {
     width: 100%;
     height: auto;
-    background: linear-gradient(147deg, #c7c4c4 10%, #888585 85%);
+    background: var(--bg-primary);
 }
 
 .outer-wrap {
@@ -666,55 +673,16 @@ input {
     flex-direction: row;
 }
 
-.footer-wrap .footer-name {
-    flex-basis: 40%;
-    padding-left: 8rem;
-    display: flex;
-}
-
-.footer-wrap .footer-name h4 {
-    color: #333;
-    font-size: 3vh;
-    padding-top: 1.5rem;
-}
-
-.footer-wrap .footer-name h4 span {
-    color: #fff;
-}
-
-.footer-wrap .footer-name .name-img {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    margin-top: 2rem;
-    margin-right: 1rem;
-}
-
-.footer-wrap .footer-name .name-img img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 .footer-wrap .footer-contact {
-    flex-basis: 60%;
+    flex-basis: 40%;
     padding-top: 2rem;
+    padding-left: 6rem;
 }
 
 .footer-wrap .footer-contact .contact-wrap ul.contact {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-right: 1rem;
-}
-
-.footer-wrap .footer-contact .contact-wrap ul.contact .contact-left {
-    flex-basis: 50%;
-}
-
-.footer-wrap .footer-contact .contact-wrap ul.contact .contact-right {
-    flex-basis: 50%;
 }
 
 .footer-wrap .footer-contact .contact-wrap ul {
@@ -735,10 +703,82 @@ input {
     margin-right: 15px;
 }
 
+.footer-wrap .footer-form {
+    flex-basis: 60%;
+    max-width: 500px;
+    width: 100%;
+    padding-right: 1.5rem;
+}
+
+.footer-wrap .footer-form form {
+    width: 100%;
+}
+
+.footer-wrap .footer-form h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer-wrap .footer-form .data {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+}
+
+input.input {
+    display: block;
+}
+
+.footer-wrap .footer-form .data label {
+    /* width = biar si inputannya sama semua sejajar */
+    width: 50px;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.footer-wrap .footer-form .data input,
+.footer-wrap .footer-form .data textarea {
+    width: 80%;
+    outline: none;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.footer-wrap .footer-form .data textarea {
+    resize: none;
+}
+
+.footer-wrap .footer-form .data input:focus,
+.footer-wrap .footer-form .data textarea:focus {
+    border: 2px solid #484857;
+}
+
+.footer-wrap .footer-form .data button {
+    width: 85%;
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0;
+    background: #484857;
+    color: #f9f8e5;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+
+.footer-wrap .footer-form .data button:hover {
+    opacity: 0.6;
+}
+
 .outer-wrap .footer-bottom {
     margin-top: 1rem;
     width: 100%;
-    background: var(--bg-primary);
+    background: #484857;
 }
 
 .outer-wrap .footer-bottom p {
@@ -756,8 +796,17 @@ input {
         padding-right: 0;
         padding-left: 0;
     }
+    .about-wrap .second-content {
+        padding-left: 3rem;
+    }
+    .biodata {
+        padding-right: 0;
+    }
+    .biodata ul li {
+        font-size: 14px;
+    }
     .quotes {
-        padding-left: 5rem;
+        padding-left: 0;
     }
     .service-wrap {
         flex-direction: column;
@@ -786,16 +835,7 @@ input {
         margin-right: 15px;
     }
     .quotes {
-        padding: 3rem 0 0 3rem;
-    }
-    .footer-wrap .footer-name {
-        flex-basis: 30%;
-    }
-    .footer-wrap .footer-contact {
-        flex-basis: 70%;
-    }
-    .footer-wrap .footer-name .name-img {
-        display: none;
+        padding: 3rem 2rem 0 0;
     }
     .sert-wrap {
         margin-left: 8rem;
@@ -816,8 +856,8 @@ input {
         flex-basis: 100%;
         padding-top: 0;
     }
-    .footer-wrap .footer-contact .contact-wrap ul li i {
-        margin-right: 8px;
+    .quotes {
+        padding-right: 3rem;
     }
     .sert-wrap {
         margin-left: 7rem;
@@ -827,20 +867,21 @@ input {
     .top-card {
         height: 250px;
     }
+    .footer-wrap .footer-contact .contact-wrap {
+        padding-right: 0.8rem;
+    }
+    .footer-wrap .footer-contact .contact-wrap ul li a i {
+        margin-right: 10px;
+    }
+    .footer-wrap .footer-form {
+        max-width: 400px;
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 630px) {
     .service-wrap .list-service {
         margin: 0;
-    }
-    .footer-wrap .footer-name {
-        flex-basis: 20%;
-    }
-    .footer-wrap .footer-contact {
-        flex-basis: 80%;
-    }
-    .footer-wrap .footer-name h4 {
-        font-size: 2.5vh;
     }
     .sert-wrap {
         margin-left: 6rem;
@@ -872,8 +913,9 @@ input {
     .about-wrap {
         padding-left: 3rem;
     }
-    .quotes {
-        padding: 3rem 0 3rem 1rem;
+    .about-wrap .second-content {
+        padding-top: 0;
+        padding-bottom: 3rem;
     }
     .service-wrap .list-service {
         padding-left: 0;
@@ -884,9 +926,6 @@ input {
     }
     .outer-wrap .footer-bottom {
         padding-bottom: 5.5rem;
-    }
-    .footer-wrap .footer-name {
-        padding-left: 2rem;
     }
     .sert-wrap {
         margin-left: 3rem;
@@ -917,6 +956,12 @@ input {
     .teks {
         margin-left: 3rem;
     }
+    .footer-wrap .footer-contact {
+        padding-left: 0;
+    }
+    .footer-wrap .footer-contact .contact-wrap ul li a i {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 550px) {
@@ -945,21 +990,47 @@ input {
 }
 
 @media only screen and (max-width: 470px) {
-    .footer-wrap {
-        flex-direction: column;
+    .biodata ul li strong {
+        font-size: 12px;
+        padding: 1px 5px;
     }
-    .footer-wrap .footer-name {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
+    .biodata ul li {
+        font-size: 12px;
     }
-    .footer-wrap .footer-contact {
-        width: 100%;
-        padding-top: 1rem;
+    .quotes {
+        padding-left: 0;
+    }
+    .quotes .text {
+        font-size: 12px;
+    }
+    .skill-wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .skill-wrap p {
+        font-size: 0.8rem;
+    }
+    .skill-wrap p span {
+        font-size: 0.6rem;
+    }
+    .skill-content .skil {
+        font-size: 0.7rem;
     }
     .teks {
         padding-right: 2rem;
+    }
+    .footer-wrap {
+        flex-direction: column;
+    }
+    .footer-wrap .footer-form {
+        max-width: 320px;
+        width: 100%;
+    }
+    .footer-wrap .footer-contact {
+        width: 100%;
+    }
+    .footer-wrap .footer-form {
+        padding: 0 3rem 0 2rem;
     }
 }
 
@@ -983,19 +1054,8 @@ input {
         padding-right: 0;
         width: 95%;
     }
-    .skill-wrap {
-        padding-left: 2rem;
-        padding-right: 0;
-    }
-    .biodata ul li strong {
-        font-size: 12px;
-        padding: 1px 5px;
-    }
     .biodata ul li {
         font-size: 10px;
-    }
-    .quotes {
-        padding-left: 2rem;
     }
     .web-wrap {
         max-width: 220px;
@@ -1020,6 +1080,11 @@ input {
         width: 30px;
         height: 10px;
     }
+    .footer-wrap .footer-form {
+        max-width: 300px;
+        width: 90%;
+        padding-right: 0;
+    }
 }
 
 @media only screen and (max-width: 365px) {
@@ -1028,11 +1093,17 @@ input {
     }
     .web-wrap {
         width: 200px;
-        background: linear-gradient(to top, rgba(152, 156, 165, 0.7) 0%, rgba(173, 170, 170, 0) 70%);
+        background: linear-gradient(to top, var(--bg-primary) 30%, rgba(173, 170, 170, 0) 60%);
+    }
+    .web-wrap .web-inner .web-desc {
+        color: #fff;
+    }
+    .web-wrap .web-inner .web-desc span {
+        color: #fff;
     }
     .web-wrap .web-inner .web-desc .button {
         background: #fff;
-        color: #aaa8a8;
+        color: var(--bg-primary);
     }
     .sliders .tab {
         background: var(--bg-secondary);
@@ -1042,14 +1113,6 @@ input {
     }
     .web-wrap .web-inner .web-desc .button {
         padding: 10px;
-    }
-    .footer-wrap .footer-contact .contact-wrap ul li,
-    .outer-wrap .footer-bottom p {
-        font-size: 0.7rem;
-    }
-    .footer-wrap .footer-contact .contact-wrap ul li i {
-        font-size: 0.9rem;
-        margin-right: 5px;
     }
     .sert-wrap {
         max-width: 280px;
@@ -1063,6 +1126,11 @@ input {
         max-width: 100px;
         width: 90%;
         height: 50px;
+    }
+    .footer-wrap .footer-form {
+        max-width: 250px;
+        width: 90%;
+        padding-right: 1rem;
     }
 }
 
@@ -1090,13 +1158,6 @@ input {
     }
     .outer-wrap .footer-bottom p {
         font-size: 0.6rem;
-    }
-    .footer-wrap .footer-contact .contact-wrap ul.contact {
-        flex-direction: column;
-    }
-    .footer-wrap .footer-contact .contact-wrap ul.contact .contact-left,
-    .footer-wrap .footer-contact .contact-wrap ul.contact .contact-right {
-        width: 100%;
     }
     .sert-wrap {
         max-width: 250px;
