@@ -208,7 +208,7 @@ body::-webkit-scrollbar-thumb {
 .service {
     width: 100%;
     height: auto;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
 }
 
 .about-wrap,
@@ -334,56 +334,43 @@ body::-webkit-scrollbar-thumb {
 }
 
 .skill-wrap {
-    position: relative;
-    margin-top: 20px;
-    width: 90%;
-}
-
-.skill-wrap p span {
-    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    padding-top: 1.5rem;
+    margin: 0 auto;
+    padding-right: 2rem;
 }
 
 .skill-wrap .content {
-    width: 100%;
-    background: #ddd;
+    width: 60px;
+    height: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.skill-content .skil {
-    text-align: right;
-    padding: 1px 10px 1px 0;
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 700;
+.skill-wrap .content p {
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
-.skill-wrap .skill-content.html {
+.skill-wrap .content .icon {
+    position: relative;
     width: 90%;
-    background: #e98b11;
+    height: 70px;
 }
 
-.skill-wrap .skill-content.css {
-    width: 85%;
-    background: #1c93f5;
-}
-
-.skill-wrap .skill-content.js {
-    width: 70%;
-    background: #d2e415;
-}
-
-.skill-wrap .skill-content.php {
-    width: 70%;
-    background: #c29999;
-}
-
-.skill-wrap .skill-content.laravel {
-    width: 80%;
-    background: #ff3425;
-}
-
-.skill-wrap .skill-content.sql {
-    width: 85%;
-    background: #dda303;
+.skill-wrap .content .icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.7s;
 }
 
 
@@ -541,7 +528,9 @@ input {
 #tab-3:checked~.web-inner .img-3,
 #tab-4:checked~.web-inner .img-4,
 #tab-5:checked~.web-inner .img-5,
-#tab-6:checked~.web-inner .img-6 {
+#tab-6:checked~.web-inner .img-6,
+#tab-7:checked~.web-inner .img-7,
+#tab-8:checked~.web-inner .img-8 {
     opacity: 1;
     transition-delay: 0.6s;
 }
@@ -556,7 +545,9 @@ input {
 #tab-3:checked~.web-inner .content-3,
 #tab-4:checked~.web-inner .content-4,
 #tab-5:checked~.web-inner .content-5,
-#tab-6:checked~.web-inner .content-6 {
+#tab-6:checked~.web-inner .content-6,
+#tab-7:checked~.web-inner .content-7,
+#tab-8:checked~.web-inner .content-8 {
     opacity: 1;
     z-index: 100;
     transition-delay: 0.3s;
@@ -615,7 +606,7 @@ input {
 .sliders .tab {
     position: relative;
     height: 8px;
-    width: 20px;
+    width: 15px;
     background: linear-gradient(147deg, #c7c4c4 10%, #aaa8a8 74%);
     border-radius: 5px;
     border: 1px solid #808080!important;
@@ -643,7 +634,9 @@ input {
 #tab-3:checked~.sliders .tab-3::before,
 #tab-4:checked~.sliders .tab-4::before,
 #tab-5:checked~.sliders .tab-5::before,
-#tab-6:checked~.sliders .tab-6::before {
+#tab-6:checked~.sliders .tab-6::before,
+#tab-7:checked~.sliders .tab-7::before,
+#tab-8:checked~.sliders .tab-8::before {
     transform: scaleX(1);
     width: 100%;
 }
@@ -930,16 +923,17 @@ input {
         padding-left: 0;
     }
     .about-wrap .second-content {
-        padding-left: 3rem;
+        padding-left: 2rem;
     }
     .biodata {
-        padding-right: 0;
+        padding-right: 2rem;
     }
     .biodata ul li {
         font-size: 14px;
     }
     .quotes {
-        padding-left: 0;
+        padding-left: 3rem;
+        padding-right: 2rem;
     }
     .sert-wrap {
         max-width: 500px;
@@ -954,6 +948,9 @@ input {
     .banner .content .textBox h2 {
         font-size: 3rem;
     }
+    .skill-wrap {
+        padding-right: 0;
+    }
 }
 
 @media only screen and (max-width: 770px) {
@@ -964,9 +961,6 @@ input {
         width: 210px;
         height: 320px;
         margin-right: 15px;
-    }
-    .quotes {
-        padding: 3rem 2rem 0 0;
     }
     .sert-wrap {
         margin-left: 8rem;
@@ -988,9 +982,19 @@ input {
     }
     .about-wrap .second-content {
         flex-basis: 100%;
+        padding: 0;
+    }
+    .skill-wrap {
+        margin-bottom: 0;
+        width: 100%;
+        padding-right: 0;
+    }
+    .biodata {
+        padding-right: 3rem;
         padding-top: 0;
     }
     .quotes {
+        padding-top: 1rem;
         padding-right: 3rem;
     }
     .sert-wrap {
@@ -1068,8 +1072,7 @@ input {
         padding-left: 3rem;
     }
     .about-wrap .second-content {
-        padding-top: 0;
-        padding-bottom: 3rem;
+        padding-bottom: 1.5rem;
     }
     .service-wrap .list-service {
         padding-left: 0;
@@ -1177,19 +1180,6 @@ input {
     .quotes .text {
         font-size: 12px;
     }
-    .skill-wrap {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .skill-wrap p {
-        font-size: 0.8rem;
-    }
-    .skill-wrap p span {
-        font-size: 0.6rem;
-    }
-    .skill-content .skil {
-        font-size: 0.7rem;
-    }
     .teks {
         padding-right: 2rem;
     }
@@ -1214,6 +1204,12 @@ input {
         font-size: 1rem;
         color: #fff;
     }
+    .skill-wrap {
+        padding-right: 0;
+    }
+    .quotes {
+        padding-left: 2rem;
+    }
 }
 
 @media only screen and (max-width: 410px) {
@@ -1235,6 +1231,9 @@ input {
         padding-left: 2rem;
         padding-right: 0;
         width: 95%;
+    }
+    .skill-wrap {
+        padding-left: 2rem;
     }
     .biodata ul li {
         font-size: 10px;
